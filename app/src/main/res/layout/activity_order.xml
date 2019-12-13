@@ -1,0 +1,117 @@
+<RelativeLayout android:background="#e1e1e1"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:backgroundTint="@android:color/white">
+    <LinearLayout
+        android:id="@+id/layout_total"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/Total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="Total : "
+            android:textColor="@android:color/white"
+            android:textSize="40dp"></TextView>
+
+        <TextView
+            android:id="@+id/priceOrderTotal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="0 Rs"
+            android:textColor="@android:color/white"
+            android:textSize="40dp">
+        </TextView>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_placeorder"
+        android:layout_below="@+id/layout_total"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/userNameCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Username : "
+            android:textSize="40dp"></TextView>
+
+        <TextView
+            android:id="@+id/userNameCartValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/userNameCart"
+            android:text="0 Rs"
+            android:textSize="40dp"
+            android:textColor="@color/colorPrimaryDark"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/goodsNameCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userNameCart"
+            android:gravity="start"
+            android:text="Goods : "
+            android:textSize="40dp"></TextView>
+
+        <TextView
+            android:id="@+id/goodsNameCartValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userNameCart"
+            android:layout_toRightOf="@id/goodsNameCart"
+            android:text="0 Rs"
+            android:textSize="40dp"
+            android:textColor="@color/colorPrimaryDark"></TextView>
+
+        <TextView
+            android:id="@+id/quantityCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/goodsNameCart"
+            android:gravity="start"
+            android:text="Quantity : "
+            android:textSize="40dp"></TextView>
+
+        <TextView
+            android:id="@+id/quantityCartValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/goodsNameCart"
+            android:layout_toRightOf="@id/quantityCart"
+            android:text="0 Rs"
+            android:textSize="40dp"
+            android:textColor="@color/colorPrimaryDark"></TextView>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_placeorder"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:onClick="insertOrder"
+        android:text="Place Order"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:textSize="40dp"
+        android:theme="@style/Theme.MaterialButton">
+    </Button>
+
+</RelativeLayout>
